@@ -135,10 +135,12 @@ void parse_file ( char * filename,
       matrix_mult(transform,edges);
     }
     else if(strcmp(args[i],"display")==0){
-      clear_screen(s);
-      draw_lines(edges, s, c);
+      display(s);
+     
     }
     else if(strcmp(args[i],"save")==0){
+      clear_screen(s);
+      draw_lines(edges, s, c);
       save_extension(s, "new.png");
     }
     else if(strcmp(args[i],"quit")==0){
